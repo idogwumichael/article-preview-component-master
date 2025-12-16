@@ -9,44 +9,99 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+
 </head>
+
 <body>
-  <div class="card flex-container">
-    <img class="img-card" src="images/drawers.jpg" alt="">
-    <div class="main-content">
-       <h3>
-         Shift the overall look and feel by adding these 
-         wonderful touches to furniture in your home
-      </h3>
-      <p class="paragraph">
-        Ever been in a room and felt like
-        something was missing? Perhaps it felt
-        slightly bare and uninviting. I’ve
-        got some simple tips to help
-        you make any room feel complete.
-      </p>
-      <div class="info flex-container">
-        <div class="flex-container">
-          <img class="avatar" src="images/avatar-michelle.jpg" alt="">
-          <div>
-             <h4>Michelle Appleton</h4>
-             <p>28 Jun 2020</p>
-          </div>
-        </div>
-        <div class="pop-up sr-only flex-container">
-          <p>SHARE</p>
-          <img src="images/icon-facebook.svg" alt="">
-          <img src="images/icon-twitter.svg" alt="">
-          <img src="images/icon-pinterest.svg" alt="">
-        </div>
-        <div class="triangle sr-only"></div>
-        <div class="bg-icon">
-         <img class="icon-share" src="images/icon-share.svg" alt="">
-      </div>
-      </div>
-    </div>
-  </div>
+
+<!-- hero image -->
+
+<main class="container">
+<div class="image">
+<img src="images/drawers.jpg" alt="Drawers picture">
+
+</div>
+
+<!-- main content -->
+
+<article class="body">
+
+  <div class="text">
+<p class="title">
+ Shift the overall look and feel by adding these wonderful 
+  touches to furniture in your home
+</p>
+
+<p class="par">
+  Ever been in a room and felt like something was missing? Perhaps 
+  it felt slightly bare and uninviting. I've got some simple tips 
+  to help you make any room feel complete.
+
+</p>
+</div>
+
+<!-- arrow icon -->
+<svg xmlns="http://www.w3.org/2000/svg" width="15" height="13" class="share-btn-1">
+  <path  d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z"
   
-  <script src="script.js"></script>
+  transform="translate(10,10)"/>
+
+</svg>
+
+
+
+<!-- footer -->
+
+<footer>
+
+<figure class="avatar">
+  <img src="images/avatar-michelle.jpg" alt="Avatar" class="avatar-img">
+  <figcaption>
+<p class="name">
+  Michelle Appleton
+</p>
+
+<p class="date">
+ 28 Jun 2020
+</p>
+  </figcaption>
+
+</figure>
+ </footer>
+
+  <!-- share box -->
+<div class="share">
+  <div class="links">
+    <p class="share-text">Share</p>
+    <a href="https://www.facebook.com/friends/suggestions/?profile_id=100024563356909" class="fb">
+<img src="images/icon-facebook.svg" alt="facebook" class="facebook">
+</a>
+<a href="https://x.com/" class="twitter-link">
+<img src="images/icon-twitter.svg" alt="twitter" class="twitter">
+</a>
+<a href="https://uk.pinterest.com/" class="pinterest-link">
+<img src="images/icon-pinterest.svg" alt="pintrest" class="pintrest">
+</a>
+
+</div>
+</div>
+</article>
+</main>
+
+<script>
+
+'use strict';
+const shareBtn = document.querySelector('.share-btn-1');
+const container = document.querySelector('.container');
+
+shareBtn.addEventListener('click', function()
+{
+  container.classList.toggle('active')
+}
+
+)
+
+</script>
+
 </body>
 </html>
